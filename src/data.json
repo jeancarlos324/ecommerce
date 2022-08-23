@@ -1,0 +1,30 @@
+[
+  {
+    "id":1,
+    "name": "Authentic",
+    "price": 229.00,
+    "stock": 8,
+    "image":"https://cdn.shopify.com/s/files/1/0112/4394/6046/products/VN000EE3BLK_2_large.jpg?v=1589326390"
+  },
+  {
+    "id":2,
+    "name": "Old-Skull",
+    "price": 278.00,
+    "stock": 15,
+    "image":"https://cdn.shopify.com/s/files/1/0112/4394/6046/products/VN000D3HY28_3_6af694fc-4d6f-40d7-96c9-1b8905a2ca80.jpg?v=1611347576"
+  },
+  {
+    "id":3,
+    "name": "Sk8-Hi",
+    "price": 369.00,
+    "stock": 7,
+    "image":"https://cdn.shopify.com/s/files/1/0112/4394/6046/products/VN000D5IB8C_1_9f0fe721-6d95-4e7c-94ed-283efaef7d16_large.jpg?v=1598458166"
+  },
+  {
+    "id":4,
+    "name": "Slip-On",
+    "price": 229.00,
+    "stock": 9,
+    "image":"https://cdn.shopify.com/s/files/1/0112/4394/6046/products/VN000EYEBWW_2_af7f14ba-08a3-4da7-9164-273f018610f2_large.jpg?v=1598419818"
+  }
+]

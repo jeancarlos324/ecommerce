@@ -7,7 +7,9 @@ let countSk8  = 0;
 let countSlip = 0;
 
 const containerProducts = document.querySelector(".products");
-const addItemCard = document.querySelector(".add-card-product");
+const addItemCard = document.querySelector(".card-total");
+const addNumberCard = document.querySelector(".theme");
+const totalPrice = document.querySelector("total-price");
 const insertProducts = (products) => {
   containerProducts.innerHTML = products
     .map((product) => {
@@ -101,7 +103,7 @@ const countProduct = (id) => {
        <div class="add-card-product-data">
          <span class="add-card-product-name">${name}</span>
          <div class="add-card-product-price">
-           <span><b>Subtotal: </b>${price}</span>
+           <span><b>Subtotal: </b>$${price*quantity}</span>
            <span><b>Quantity: </b>${quantity}</span>
          </div>
        </div>
@@ -112,7 +114,15 @@ const countProduct = (id) => {
    }
  }
  showAllProduct();
-
+let totalProduct = [];
+ const totalPriceCard = () =>{
+  for(let i=0; i<localStorage.length;i++) {
+     let key = localStorage.key(i);
+    totalProduct.push(stringToObj(localStorage.getItem(key)));
+  }
+  console.log(totalProduct[1].quantity);;
+}
+totalPriceCard();
   const addItemProducts = (item) => {
   const getItem = objToString(localStorage.getItem(item));
   arrayItems.push(getItem);
@@ -120,8 +130,7 @@ const countProduct = (id) => {
    addItemCard.innerHTML = newArrayItems
    .map((item) => {
      const { id, image, name, price, stock } = item;
-
-     console.log(item[id]);     return`
+      return`
      <div class="add-card-product">
       <div class="add-card-product-image">
         <img src=${image} alt="20">
@@ -138,3 +147,22 @@ const countProduct = (id) => {
    `
    }).join('');
  };
+
+ function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains('show')) {
+      openDropdown.classList.remove('show');
+    }
+  }
+}
+}
